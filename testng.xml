@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Selenium Framework Suite" verbose="1" parallel="tests" thread-count="1">
+<listeners>
+    <listener class-name="listeners.TestListener"/>
+</listeners>
+
+<test name="Login Tests">
+<classes>
+<class name="Tests.LoginTest"/>
+</classes>
+</test>
+
+ <test name="Login multiple Test data">
+ <classes>
+ <class name="Tests.LoginDataDrivenTest"/>
+ </classes>
+ </test>
+
+<test name="Dashboard Tests">
+<classes>
+<class name="Tests.DashboardTest"/>
+</classes>
+</test>
+
+<test name="Add Employee Tests">
+<classes>
+<class name="Tests.AddEmployeeTest"/>
+</classes>
+</test>
+
+</suite>

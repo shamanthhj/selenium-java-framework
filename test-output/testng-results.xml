@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-06-13T00:52:47 IST" name="Selenium Framework Suite" finished-at="2025-06-13T00:54:18 IST" duration-ms="91036">
+    <groups>
+      <group name="regression">
+        <method signature="LoginTest.validLoginTest()[pri:1, instance:Tests.LoginTest@4748a0f9]" name="validLoginTest" class="Tests.LoginTest"/>
+        <method signature="DashboardTest.verifyDashboardVisbleAfterLogin()[pri:0, instance:Tests.DashboardTest@604f2bd2]" name="verifyDashboardVisbleAfterLogin" class="Tests.DashboardTest"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="LoginTest.invalidLoginTest()[pri:2, instance:Tests.LoginTest@4748a0f9]" name="invalidLoginTest" class="Tests.LoginTest"/>
+        <method signature="DashboardTest.verifyDashboardVisbleAfterLogin()[pri:0, instance:Tests.DashboardTest@604f2bd2]" name="verifyDashboardVisbleAfterLogin" class="Tests.DashboardTest"/>
+        <method signature="AddEmployeeTest.addEmployeeSuccessfully()[pri:0, instance:Tests.AddEmployeeTest@363042d7]" name="addEmployeeSuccessfully" class="Tests.AddEmployeeTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2025-06-13T00:52:47 IST" name="Login Tests" finished-at="2025-06-13T00:53:28 IST" duration-ms="41105">
+      <class name="Tests.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Tests.LoginTest@4748a0f9]" started-at="2025-06-13T00:52:47 IST" name="setup" finished-at="2025-06-13T00:52:54 IST" duration-ms="7621" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validLoginTest()[pri:1, instance:Tests.LoginTest@4748a0f9]" started-at="2025-06-13T00:52:54 IST" name="validLoginTest" finished-at="2025-06-13T00:52:57 IST" duration-ms="2226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.LoginTest@4748a0f9]" started-at="2025-06-13T00:52:57 IST" name="tearDown" finished-at="2025-06-13T00:52:57 IST" duration-ms="389" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:Tests.LoginTest@4748a0f9]" started-at="2025-06-13T00:52:57 IST" name="setup" finished-at="2025-06-13T00:53:01 IST" duration-ms="4360" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="invalidLoginTest()[pri:2, instance:Tests.LoginTest@4748a0f9]" started-at="2025-06-13T00:53:01 IST" name="invalidLoginTest" finished-at="2025-06-13T00:53:04 IST" duration-ms="2865" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.LoginTest@4748a0f9]" started-at="2025-06-13T00:53:04 IST" name="tearDown" finished-at="2025-06-13T00:53:05 IST" duration-ms="385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:Tests.LoginTest@4748a0f9]" started-at="2025-06-13T00:53:05 IST" name="setup" finished-at="2025-06-13T00:53:10 IST" duration-ms="5867" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="emptyLoginTest()[pri:3, instance:Tests.LoginTest@4748a0f9]" started-at="2025-06-13T00:53:10 IST" name="emptyLoginTest" finished-at="2025-06-13T00:53:23 IST" duration-ms="12370" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//p[text()='Invalid credentials']"}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.22'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2ad12888f8b23b84b294893bc39a190a, findElement {using=xpath, value=//p[text()='Invalid credentials']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\shama\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58425}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58425/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ad12888f8b23b84b294893bc39a190a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//p[text()='Invalid credentials']"}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.22'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2ad12888f8b23b84b294893bc39a190a, findElement {using=xpath, value=//p[text()='Invalid credentials']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\shama\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58425}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58425/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ad12888f8b23b84b294893bc39a190a
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at Pages.LoginPage.getInvalidLoginMessage(LoginPage.java:37)
+at Tests.LoginTest.emptyLoginTest(LoginTest.java:34)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:829)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyLoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.LoginTest@4748a0f9]" started-at="2025-06-13T00:53:24 IST" name="tearDown" finished-at="2025-06-13T00:53:28 IST" duration-ms="3802" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.LoginTest -->
+    </test> <!-- Login Tests -->
+    <test started-at="2025-06-13T00:53:30 IST" name="Login multiple Test data" finished-at="2025-06-13T00:54:00 IST" duration-ms="30410">
+      <class name="Tests.LoginDataDrivenTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Tests.LoginDataDrivenTest@1cdc4c27]" started-at="2025-06-13T00:53:32 IST" name="setup" finished-at="2025-06-13T00:53:42 IST" duration-ms="10027" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testLoginWithMultipleUsers(java.lang.String,java.lang.String)[pri:0, instance:Tests.LoginDataDrivenTest@1cdc4c27]" started-at="2025-06-13T00:53:42 IST" name="testLoginWithMultipleUsers" data-provider="loginData" finished-at="2025-06-13T00:53:47 IST" duration-ms="5261" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithMultipleUsers -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.LoginDataDrivenTest@1cdc4c27]" started-at="2025-06-13T00:53:47 IST" name="tearDown" finished-at="2025-06-13T00:53:47 IST" duration-ms="425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:Tests.LoginDataDrivenTest@1cdc4c27]" started-at="2025-06-13T00:53:47 IST" name="setup" finished-at="2025-06-13T00:53:52 IST" duration-ms="4086" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testLoginWithMultipleUsers(java.lang.String,java.lang.String)[pri:0, instance:Tests.LoginDataDrivenTest@1cdc4c27]" started-at="2025-06-13T00:53:52 IST" name="testLoginWithMultipleUsers" data-provider="loginData" finished-at="2025-06-13T00:53:54 IST" duration-ms="2244" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrongpass]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithMultipleUsers -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.LoginDataDrivenTest@1cdc4c27]" started-at="2025-06-13T00:53:54 IST" name="tearDown" finished-at="2025-06-13T00:53:54 IST" duration-ms="287" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:Tests.LoginDataDrivenTest@1cdc4c27]" started-at="2025-06-13T00:53:54 IST" name="setup" finished-at="2025-06-13T00:53:58 IST" duration-ms="4005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testLoginWithMultipleUsers(java.lang.String,java.lang.String)[pri:0, instance:Tests.LoginDataDrivenTest@1cdc4c27]" started-at="2025-06-13T00:53:58 IST" name="testLoginWithMultipleUsers" data-provider="loginData" finished-at="2025-06-13T00:54:00 IST" duration-ms="1915" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[userpass1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithMultipleUsers -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.LoginDataDrivenTest@1cdc4c27]" started-at="2025-06-13T00:54:00 IST" name="tearDown" finished-at="2025-06-13T00:54:00 IST" duration-ms="277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.LoginDataDrivenTest -->
+    </test> <!-- Login multiple Test data -->
+    <test started-at="2025-06-13T00:54:01 IST" name="Dashboard Tests" finished-at="2025-06-13T00:54:07 IST" duration-ms="6637">
+      <class name="Tests.DashboardTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Tests.DashboardTest@604f2bd2]" started-at="2025-06-13T00:54:01 IST" name="setup" finished-at="2025-06-13T00:54:05 IST" duration-ms="3874" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyDashboardVisbleAfterLogin()[pri:0, instance:Tests.DashboardTest@604f2bd2]" started-at="2025-06-13T00:54:05 IST" name="verifyDashboardVisbleAfterLogin" finished-at="2025-06-13T00:54:07 IST" duration-ms="2492" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDashboardVisbleAfterLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.DashboardTest@604f2bd2]" started-at="2025-06-13T00:54:07 IST" name="tearDown" finished-at="2025-06-13T00:54:07 IST" duration-ms="257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.DashboardTest -->
+    </test> <!-- Dashboard Tests -->
+    <test started-at="2025-06-13T00:54:07 IST" name="Add Employee Tests" finished-at="2025-06-13T00:54:18 IST" duration-ms="10208">
+      <class name="Tests.AddEmployeeTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Tests.AddEmployeeTest@363042d7]" started-at="2025-06-13T00:54:07 IST" name="setup" finished-at="2025-06-13T00:54:12 IST" duration-ms="4184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="addEmployeeSuccessfully()[pri:0, instance:Tests.AddEmployeeTest@363042d7]" started-at="2025-06-13T00:54:12 IST" name="addEmployeeSuccessfully" finished-at="2025-06-13T00:54:17 IST" duration-ms="5582" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployeeSuccessfully -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.AddEmployeeTest@363042d7]" started-at="2025-06-13T00:54:17 IST" name="tearDown" finished-at="2025-06-13T00:54:18 IST" duration-ms="426" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.AddEmployeeTest -->
+    </test> <!-- Add Employee Tests -->
+  </suite> <!-- Selenium Framework Suite -->
+</testng-results>
