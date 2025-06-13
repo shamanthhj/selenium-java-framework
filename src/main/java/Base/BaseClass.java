@@ -1,6 +1,8 @@
 package Base;
 
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
@@ -23,11 +25,30 @@ public class BaseClass {
 		{
 			/*WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();*/
-			 WebDriverManager.chromedriver().driverVersion("126.0.6478.114").setup();
-			    ChromeOptions options = new ChromeOptions();
-			    options.setBinary("/usr/bin/chromium-browser");
-			    options.addArguments("--headless=new", "--no-sandbox", "--disable-dev-shm-usage");
-			    driver = new ChromeDriver(options);
+			try {
+                // Get current Chromium version
+                Process process = Runtime.getRuntime().exec("chromium-browser --version");
+                BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+                String versionOutput = reader.readLine();
+                String version = versionOutput.replaceAll("[^0-9.]", "").split("\\.")[0]; // Just the major version (e.g., 126)
+                System.out.println("Detected Chromium version: " + version);
+
+                // Setup compatible ChromeDriver
+                WebDriverManager.chromedriver().browserVersion(version).setup();
+
+                // Headless & secure options for Jenkins
+                ChromeOptions options = new ChromeOptions();
+                options.setBinary("/usr/bin/chromium-browser");
+                options.addArguments("--headless=new");
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
+
+                driver = new ChromeDriver(options);
+
+            } catch (Exception e) {
+                System.err.println("Error setting up ChromeDriver: " + e.getMessage());
+                e.printStackTrace();
+            }
 		} else if (browser.equalsIgnoreCase("edge")) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver(); 
