@@ -26,37 +26,44 @@ public class BaseClass {
 			/*WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();*/
 			try {
-                // Get current Chromium version
-                Process process = Runtime.getRuntime().exec("chromium-browser --version");
-                BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-                String versionOutput = reader.readLine();
-                String version = versionOutput.replaceAll("[^0-9.]", "").split("\\.")[0]; // Just the major version (e.g., 126)
-                System.out.println("Detected Chromium version: " + version);
+				if (browser.equalsIgnoreCase("chrome")) {
+					// Get current Chromium version
+					Process process = Runtime.getRuntime().exec("chromium-browser --version");
+					BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+					String versionOutput = reader.readLine();
+					String version = versionOutput.replaceAll("[^0-9.]", "").split("\\.")[0];
+					System.out.println("Detected Chromium version: " + version);
 
-                // Setup compatible ChromeDriver
-                WebDriverManager.chromedriver().browserVersion(version).setup();
+					// Setup compatible ChromeDriver
+					WebDriverManager.chromedriver().browserVersion(version).setup();
 
-                // Headless & secure options for Jenkins
-                ChromeOptions options = new ChromeOptions();
-                options.setBinary("/usr/bin/chromium-browser");
-                options.addArguments("--headless=new");
-                options.addArguments("--no-sandbox");
-                options.addArguments("--disable-dev-shm-usage");
+					// Headless & secure options for Jenkins
+					ChromeOptions options = new ChromeOptions();
+					options.setBinary("/usr/bin/chromium-browser");
+					options.addArguments("--headless"); //
+					options.addArguments("--no-sandbox");
+					options.addArguments("--disable-dev-shm-usage");
+					options.addArguments("--disable-gpu");
+					options.addArguments("--remote-debugging-port=9222"); // 
 
-                driver = new ChromeDriver(options);
+					driver = new ChromeDriver(options);
+				} else if (browser.equalsIgnoreCase("edge")) {
+					WebDriverManager.edgedriver().setup();
+					driver = new EdgeDriver();
+				}
 
-            } catch (Exception e) {
-                System.err.println("Error setting up ChromeDriver: " + e.getMessage());
-                e.printStackTrace();
-            }
-		} else if (browser.equalsIgnoreCase("edge")) {
-			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver(); 
+				if (driver != null) {
+					driver.manage().window().maximize();
+					driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+					driver.get(appURL);
+				} else {
+					System.err.println("WebDriver is null. Setup failed.");
+				}
+			} catch (Exception e) {
+				System.err.println("Error setting up WebDriver: " + e.getMessage());
+				e.printStackTrace();
+			}
 		}
-		
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get(appURL);
 	}
 	
 	@AfterMethod
