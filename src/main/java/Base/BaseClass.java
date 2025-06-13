@@ -23,17 +23,11 @@ public class BaseClass {
 		{
 			/*WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();*/
-			WebDriverManager.chromedriver().setup();
-
-            ChromeOptions options = new ChromeOptions();
-            
-            options.addArguments("--headless=new"); 
-            options.addArguments("--no-sandbox");
-            options.addArguments("--disable-dev-shm-usage");
-
-            options.setBinary("/usr/bin/chromium-browser"); 
-
-            driver = new ChromeDriver(options);
+			 WebDriverManager.chromedriver().driverVersion("126.0.6478.114").setup();
+			    ChromeOptions options = new ChromeOptions();
+			    options.setBinary("/usr/bin/chromium-browser");
+			    options.addArguments("--headless=new", "--no-sandbox", "--disable-dev-shm-usage");
+			    driver = new ChromeDriver(options);
 		} else if (browser.equalsIgnoreCase("edge")) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver(); 
