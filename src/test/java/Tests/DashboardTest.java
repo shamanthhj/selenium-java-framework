@@ -9,7 +9,7 @@ import Pages.LoginPage;
 
 public class DashboardTest extends BaseClass {
 	
-	@Test(groups = {"smoke", "regression"})
+	@Test(groups = {"smoke"})
 	public void verifyDashboardVisbleAfterLogin() {
 		System.out.println("Driver in DashboardTest: " + driver);
 		Assert.assertNotNull(driver, "Driver is null!");

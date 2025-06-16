@@ -8,52 +8,14 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Selenium Framework Suite</th></tr>
-<tr><td><a href="#t0">Login Tests</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">36,681</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Login multiple Test data</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">21,294</td><td></td><td></td></tr>
-<tr><td><a href="#t2">Dashboard Tests</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">6,604</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t3">Add Employee Tests</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">9,825</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">7</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">74,404</th><th colspan="2"></th></tr>
+<tr><th colspan="8">SmokeSuite</th></tr>
+<tr><td><a href="#t0">SmokeTests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">151</td><td>smoke</td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Selenium Framework Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Login Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Tests.LoginTest</td><td><a href="#m0">emptyLoginTest</a></td><td rowspan="1">1749816944843</td><td rowspan="1">10759</td></tr><tr><th colspan="4">Login Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">Tests.LoginTest</td><td><a href="#m1">invalidLoginTest</a></td><td rowspan="1">1749816937629</td><td rowspan="1">2694</td></tr><tr class="passedeven"><td><a href="#m2">validLoginTest</a></td><td rowspan="1">1749816929711</td><td rowspan="1">2188</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Login multiple Test data &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">Tests.LoginDataDrivenTest</td><td><a href="#m3">testLoginWithMultipleUsers</a></td><td rowspan="3">1749816962649</td><td rowspan="3">2114</td></tr><tr class="passedeven"><td><a href="#m4">testLoginWithMultipleUsers</a></td></tr><tr class="passedeven"><td><a href="#m5">testLoginWithMultipleUsers</a></td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">Dashboard Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Tests.DashboardTest</td><td><a href="#m6">verifyDashboardVisbleAfterLogin</a></td><td rowspan="1">1749816982312</td><td rowspan="1">2389</td></tr></tbody>
-<tbody id="t3"><tr><th colspan="4">Add Employee Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Tests.AddEmployeeTest</td><td><a href="#m7">addEmployeeSuccessfully</a></td><td rowspan="1">1749816989062</td><td rowspan="1">5638</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">SmokeSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">SmokeTests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Tests.DashboardTest</td><td><a href="#m0">verifyDashboardVisbleAfterLogin</a></td><td rowspan="1">1750081369844</td><td rowspan="1">30</td></tr></tbody>
 </table>
-<h2>Login Tests</h2><h3 id="m0">Tests.LoginTest#emptyLoginTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[text()=&apos;Invalid credentials&apos;]&quot;}
-  (Session info: chrome=137.0.7151.104)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.22&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1f5ca4127c30cd3fb931269d3821d29c, findElement {using=xpath, value=//p[text()=&apos;Invalid credentials&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\shama\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50117}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50117/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1f5ca4127c30cd3fb931269d3821d29c
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at Pages.LoginPage.getInvalidLoginMessage(LoginPage.java:37)
-	at Tests.LoginTest.emptyLoginTest(LoginTest.java:34)
+<h2>SmokeTests</h2><h3 id="m0">Tests.DashboardTest#verifyDashboardVisbleAfterLogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Driver is null! expected object to not be null
+	at Tests.DashboardTest.verifyDashboardVisbleAfterLogin(DashboardTest.java:15)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">Tests.LoginTest#invalidLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">Tests.LoginTest#validLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Login multiple Test data</h2><h3 id="m3">Tests.LoginDataDrivenTest#testLoginWithMultipleUsers</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Admin</td><td>admin123</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">Tests.LoginDataDrivenTest#testLoginWithMultipleUsers</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Admin</td><td>wrongpass</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">Tests.LoginDataDrivenTest#testLoginWithMultipleUsers</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>user1</td><td>userpass1</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Dashboard Tests</h2><h3 id="m6">Tests.DashboardTest#verifyDashboardVisbleAfterLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Add Employee Tests</h2><h3 id="m7">Tests.AddEmployeeTest#addEmployeeSuccessfully</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

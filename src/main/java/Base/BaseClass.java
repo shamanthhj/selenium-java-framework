@@ -1,8 +1,6 @@
 package Base;
 
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
@@ -25,47 +23,20 @@ public class BaseClass {
 		{
 			/*WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();*/
-			try {
-				if (browser.equalsIgnoreCase("chrome")) {
-					// Get current Chromium version
-					Process process = Runtime.getRuntime().exec("chromium-browser --version");
-					BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-					String versionOutput = reader.readLine();
-					String version = versionOutput.replaceAll("[^0-9.]", "").split("\\.")[0];
-					System.out.println("Detected Chromium version: " + version);
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
+			driver = new ChromeDriver(options);
 
-					// Setup compatible ChromeDriver
-					WebDriverManager.chromedriver().browserVersion(version).setup();
-
-					// Headless & secure options for Jenkins
-					ChromeOptions options = new ChromeOptions();
-					options.setBinary("/usr/bin/chromium-browser");
-					options.addArguments("--headless"); //
-					options.addArguments("--no-sandbox");
-					options.addArguments("--disable-dev-shm-usage");
-					options.addArguments("--disable-gpu");
-					options.addArguments("--remote-debugging-port=9222"); // 
-
-					driver = new ChromeDriver(options);
-				} else if (browser.equalsIgnoreCase("edge")) {
-					WebDriverManager.edgedriver().setup();
-					driver = new EdgeDriver();
-				}
-
-				if (driver != null) {
-					driver.manage().window().maximize();
-					driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-					driver.get(appURL);
-				} else {
-					System.err.println("WebDriver is null. Setup failed.");
-				}
-			} catch (Exception e) {
-				System.err.println("Error setting up WebDriver: " + e.getMessage());
-				e.printStackTrace();
-			}
+		}else if (browser.equalsIgnoreCase("edge")) {
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver(); 
 		}
+		
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get(appURL);
 	}
-	
+
 	@AfterMethod
 	public void tearDown()
 	{
@@ -74,3 +45,5 @@ public class BaseClass {
 	}
 
 }
+
+
